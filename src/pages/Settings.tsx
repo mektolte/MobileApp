@@ -14,7 +14,7 @@ const Settings: React.FC = () => {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Blank</IonTitle>
+            <IonTitle>Info.</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
@@ -25,7 +25,7 @@ const Settings: React.FC = () => {
                 icon={moon}
                 className="component-icon component-icon-dark"
               />
-              <IonLabel>Dark Mode</IonLabel>
+              <IonLabel>Dark Mode(PC)</IonLabel>
               <IonToggle
                 slot="end"
                 name="darkMode"

@@ -1,18 +1,5 @@
 
-
-
-
-
-.pagess{
-    background-image: url('../assets/img/BMI.png');
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    
-}
-
-.card-nobg{
+.card-bg{
     background-image: url('../assets/img/BMI.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -27,11 +14,12 @@
 }
 
 
-.cole {
-    background-color: #333333;
+.chart {
+    background-color: black;
     border: solid 2px rgb(255, 255, 255);
     margin: 100;
     text-align: center;
+    padding: 30px;
     
 }
 
@@ -43,14 +31,6 @@
     text-align: left;
     margin-right: auto;
 }
-
-.dranger{
-    color: red;
-}
-.oke{
-    color:green;
-}
-
 
 
   .body-card {
@@ -80,4 +60,6 @@
     font-weight: bold;
     font-size: 2rem;
   }
+
+  
 

@@ -61,14 +61,14 @@ const [fromCurrency, setFromCurrency] = useState<any>()
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>CurrenC</IonTitle>
+          <IonTitle>Currency Converter</IonTitle>
         </IonToolbar>
       </IonHeader>
       
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Curren C</IonTitle>
           </IonToolbar>
         </IonHeader>
       <IonCard className="body">

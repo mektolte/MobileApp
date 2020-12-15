@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import {
   IonApp,
+  IonContent,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
@@ -32,12 +33,15 @@ import  Tab2Icon from './assets/ico/Tab2Icon.svg';
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+      <IonContent  >
+        <div className="mainpage"> Welcome... Press the Tab down below to use App</div>
+       
+        </IonContent>
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/CalculateBMI" component={BmiTab} exact={true} />
           <Route path="/ConvertCurrency" component={CurrenC} exact={true} />
           <Route path="/Settings" component={Settings} />
-  
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="BmiTab" href="/CalculateBMI">

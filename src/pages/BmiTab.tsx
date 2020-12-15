@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, } from "react";
 import {
   IonHeader,
   IonToolbar,
@@ -11,18 +11,24 @@ import {
   IonCol,
   IonRow,
   IonPage,
+  IonButton,
+  IonPopover,
+  IonListHeader,
+  IonNote
   
 } from "@ionic/react";
 import "./bmi.css";
 import InputCtrl from '../components/InputCtrl';
 import BmiControls from "../components/BmiControls";
 import BmiResult from "../components/BmiResult";
+import { IonList } from '@ionic/react';
 
 
 const BmiTab: React.FC = () => {
   const [caledBMI, setcaledBMI] = useState<number>();
   const [error, setError]= useState<string>();
   const [calcUnits, setCalcUnits]= useState<'mtrx'|'impr' > ('mtrx');
+  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
   
 
   const hRef = useRef<HTMLIonInputElement>(null);
@@ -86,13 +92,13 @@ setError("Plase input Invalid, please input a number that is > 0");
     />
 
     <IonPage  >
-      <IonContent  >
+      <IonContent>
       <IonHeader>
-        <IonToolbar color="black" >
+        <IonToolbar>
           <IonTitle>Be Aim I Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <div className="card-nobg"  >
+      <div className="card-bg"  >
       <IonRow>
       <IonCol>
         <InputCtrl sValue={calcUnits} onSelectValue={selectUnitHandler} />
@@ -112,35 +118,72 @@ setError("Plase input Invalid, please input a number that is > 0");
           {caledBMI && 
           <BmiResult result={caledBMI} />
           }
-         
 
-        {/* <IonContent >
-          <div className="cole ">
-          <IonRow >
-            <IonCol className="align-left tableHead " >
-          <h1 className="tableHead ">Category</h1>
-          <br /> <h3 >Severe Thinness</h3>
-          <br /> <h3 >Moderate Thinness</h3>
-          <br /> <h3 >Mild Thinness</h3>
-          <br /> <h3 >Normal</h3>
-          <br /> <h3 >Overweight</h3>
-          <br /> <h3 >Obese Class I</h3>
-          <br /> <h3 >Obese Class II</h3>
-          <br /> <h3 >Obese Class III</h3>
-        </IonCol>
-        <IonCol ><h1 className="tableHead ">BMI-Range</h1>
-          <br /> <h3 className="dranger ">Less than 16</h3>
-          <br /> <h3 className="dranger ">16 - 17</h3>
-          <br /> <h3 className="oke ">17 - 18.5</h3>
-          <br /> <h3 className="oke ">18.5 - 25</h3>
-          <br /> <h3 className="dranger ">25 - 30</h3>
-          <br /> <h3 className="dranger ">30 - 35</h3>
-          <br /> <h3 className="dranger ">35 - 40</h3>
-          <br /> <h3 className="dranger ">More than 40</h3>
-        </IonCol>
-        </IonRow>
-        </div>
-      </IonContent> */}
+<IonPopover
+        cssClass='my-custom-class'
+        event={popoverState.event}
+        isOpen={popoverState.showPopover}
+        onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
+      >
+        <IonList>
+
+        <IonListHeader>
+          Chart Range
+        </IonListHeader>
+
+        <IonItem>
+          <IonLabel>Very Thin</IonLabel>
+          <IonNote slot="end" color="danger">Less than 16</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Thin</IonLabel>
+          <IonNote slot="end" color="danger">16 - 17</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Lil Thin</IonLabel>
+          <IonNote slot="end" color="warning">17 - 18.5</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Normal</IonLabel>
+          <IonNote slot="end" color="success">18.5 - 25</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Overweight</IonLabel>
+          <IonNote slot="end" color="warning">25 - 30</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Obese I</IonLabel>
+          <IonNote slot="end" color="danger">30 - 35</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Obese II</IonLabel>
+          <IonNote slot="end" color="danger">35 - 40</IonNote>
+        </IonItem>
+
+        <IonItem>
+          <IonLabel>Obese III</IonLabel>
+          <IonNote slot="end" color="danger">More than 40</IonNote>
+        </IonItem>
+        
+        </IonList>
+
+        
+        
+      </IonPopover>
+      <IonButton color="success" onClick={
+        (e: any) => {
+          e.persist();
+          setShowPopover({ showPopover: true, event: e })
+        } }
+      >
+        Show Range Chart
+      </IonButton>      
       </div>
       </IonContent>
     </IonPage>

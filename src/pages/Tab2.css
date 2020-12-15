@@ -9,25 +9,7 @@
     background-repeat: no-repeat;
     background-position: center;
     
-  }
-
-  .eqal {
-    margin: 0;
-    
-    justify-content: center;
-    
-  
-    background-image: url('../assets/ico/Icon8.svg');
-    background-repeat: no-repeat;
-    background-position-x: 120px;
-    background-size: contain;
-
-    height:100px;
-    width:350px;
-    
-    
-  }
-  
+  }  
   .input-card{
 background-color: rgba(245, 245, 245, 0.801);
 height: 250px;

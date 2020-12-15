@@ -1,6 +1,9 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
-
+.mainpage{
+  display: 'flex';
+  content: 'center';
+}
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
