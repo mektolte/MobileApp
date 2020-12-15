@@ -75,13 +75,7 @@
       background-color: rgba(240, 248, 255, 0) ;
       border: none;  
   }
-  
-  select {
-    border: 2px solid #333;
-    border-radius: .3em;
-    margin-left: 25rem;
-  }
-  
+
   .equals {
     font-weight: bold;
     font-size: 2rem;

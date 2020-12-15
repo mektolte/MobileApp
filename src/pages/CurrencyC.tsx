@@ -82,11 +82,9 @@ const [fromCurrency, setFromCurrency] = useState<any>()
           onChangeCurrency={(e: { target: { value: any ;}; })=> setFromCurrency(e.target.value)}
           onChangeAmount={handleFromAmountChange}
         amount={fromAmount}/>
-          <div className="eqal">
-           
           
-       
-           </div>
+          
+          <h1>=</h1>
 
          
           <CurrencyRow currencyOptions={currencyOptions}
