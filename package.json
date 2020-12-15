@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@capacitor/core": "2.4.4",
+    "@capacitor/core": "^2.4.4",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
     "@testing-library/jest-dom": "^4.2.4",
@@ -27,7 +27,6 @@
     "build": " react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.4.4",
+    "@capacitor/cli": "^2.4.4",
     "react-scripts": "3.4.0"
   },
   "description": "Project for Mobile App Development Class."

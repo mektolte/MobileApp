@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonContent,
@@ -34,14 +34,15 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonContent  >
-        <div className="mainpage"> Welcome... Press the Tab down below to use App</div>
-       
+              
         </IonContent>
       <IonTabs>
         <IonRouterOutlet>
+        
           <Route path="/CalculateBMI" component={BmiTab} exact={true} />
           <Route path="/ConvertCurrency" component={CurrenC} exact={true} />
           <Route path="/Settings" component={Settings} />
+          <Route path="/" render={() => <Redirect to="/CalculateBMI" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="BmiTab" href="/CalculateBMI">
