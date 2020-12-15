@@ -1,0 +1,89 @@
+
+
+
+
+
+.pagess{
+    background-image: url('../assets/img/BMI.png');
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+.card-nobg{
+    background-image: url('../assets/img/BMI.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height:800px;
+    
+    
+}
+
+.card-cont{
+    background-color: rgba(0, 0, 0, 0.808);
+    
+}
+
+
+.cole {
+    background-color: #333333;
+    border: solid 2px rgb(255, 255, 255);
+    margin: 100;
+    text-align: center;
+    
+}
+
+.tableHead{
+    color: white;
+}
+
+.align-left{
+    text-align: left;
+    margin-right: auto;
+}
+
+.dranger{
+    color: red;
+}
+.oke{
+    color:green;
+}
+
+
+
+  .body-card {
+    margin: 10px;
+    color:#333333;
+    
+  }
+  
+ 
+
+  .h5 {
+    padding:10px;
+    background-color: #333;
+    font-size: 30px;
+    color: #FFD700;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  
+  .input {
+      background-color: rgba(240, 248, 255, 0) ;
+      border: none;  
+  }
+  
+  select {
+    border: 2px solid #333;
+    border-radius: .3em;
+    margin-left: 25rem;
+  }
+  
+  .equals {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+

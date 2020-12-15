@@ -1,0 +1,7 @@
+{
+  "name": "Actual-End",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

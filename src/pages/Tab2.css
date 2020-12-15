@@ -1,0 +1,78 @@
+.body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 84vh;
+    text-align: center;
+    background-image: url('../assets/img/BmiBackGround.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+
+  .eqal {
+    margin: 0;
+    
+    justify-content: center;
+    
+  
+    background-image: url('../assets/ico/Icon8.svg');
+    background-repeat: no-repeat;
+    background-position-x: 120px;
+    background-size: contain;
+
+    height:100px;
+    width:350px;
+    
+    
+  }
+  
+  .input-card{
+background-color: rgba(245, 245, 245, 0.801);
+height: 250px;
+width: 350px;
+  }
+
+  .input-card2{
+    background-color: rgba(245, 245, 245, 0.801);
+    
+      }
+
+  h1 {
+    
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  .h5 {
+    padding:10px;
+    background-color: #333;
+    font-size: 30px;
+    color: #FFD700;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  
+  .input {
+    border: 2px solid #333;
+    border-radius: .3em;
+    padding: .25rem;
+    width: 15em;
+    height: 40px;
+    margin-right: 1rem;
+    font-size: 30;
+    color: #333333;
+  }
+  
+  select {
+    border: 2px solid #333;
+    border-radius: .3em;
+    margin-left: 25rem;
+  }
+  
+  .equals {
+    
+  }
